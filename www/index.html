@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Treeum</title>
+   <!-- Bootstrap -->
+   <script src="js/jquery-1.9.1.js"></script>
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="css/bootstrap-theme.css" rel="stylesheet">
+   <link href="css/style.css" type="text/css" rel="stylesheet">
+   <link href="css/fonts.css" type="text/css" rel="stylesheet">
+   <link href="css/media.css" type="text/css" rel="stylesheet">
+   <script type="text/javascrpit" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!--Begin-->
+      <!--Header-->
+<header>
+   <div class="container">
+      <div class="row header">
+         <div class="col-lg-2 col-md-2 col-sm-2 row-col logo-block">
+            <div class="logo">
+               <a href="#"><img src="images/logo.png"></a>
+            </div>
+         </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 row-col menu-block">
+            <div class="menu">
+               <ul class="menu-ul">
+                  <li class="firstElement"><a href="#">Главная</a></li>
+                  <li><a href="#">Настройки<img src="images/menu-img.png"></a>
+                     <div class="menu-dropdown">
+                        <div class="dropdown1">
+                           <ul>
+                              <li><a href="#">Тема<img class="menu-img2" src="images/menu-img2.png"></a>
+                                 <div class="dropdown2">
+                                    <ul>
+                                       <li><a href="#">Светлая</a></li>
+                                       <li><a href="#">Темная</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li><a href="#">Дата и время</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Контакты</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-sm-4 row-col search-block">
+            <div class="search">
+               <form action="">
+                  <input id="search_input" type="text" placeholder="Type and hit enter">
+               </form>
+               <div class="search-button"><a class="js-input-hide" href="#"></a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+      <!--Content-->
+<section>
+   <div class="container">
+      <div class="row content">
+         <div class="col-lg-12 col-md-12 col-sm-12 row-col content-block">
+            <div class="error-block">
+               <div class="error-block-item">
+                  <div class="error-img"><img src="images/plashka.png"></div>
+                     <div class="error-text"><p>Oopss! 404</p></div>
+                        <div class="error-info"><p>The page you are looking for has not been found</p></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<footer>
+      <div class="container">
+         <div class="row footer">
+            <div class="col-lg-12 col-md-12 col-sm-12 row-col footer-block">
+               <div class="footer-social">
+                  <ul>
+                     <li><a class="fb" href="#"><p>facebook</p></a></li>
+                     <li><a class="tw" href="#"><p>twitter</p></a></li>
+                     <li><a class="dr" href="#"><p>dribbble</p></a></li>
+                     <li><a class="gg" href="#"><p>google</p></a></li>
+                     <li><a class="lin" href="#"><p>linkedin</p></a></li>
+                     <li><a class="pi" href="#"><p>pinterest</p></a></li>
+                     <li><a class="in" href="#"><p>instagram</p></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 row-col">
+               <div class="footer-menu">
+                  <ul>
+                     <li><a href="#">home</a></li>
+                     <li><a href="#">travel</a></li>
+                     <li><a href="#">architecture</a></li>
+                     <li><a href="#">about</a></li>
+                     <li><a href="#">contact</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 row-col">
+               <div class="copyright">
+                  <p>&copy 2016 Treeum. <span>Design by Me</span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+</footer>
+</div>
+</body>
+</html>
+<script>
+   $( document ).ready(function() {
+      $('.js-input-hide').click(function () {
+// $('#search_input').animate({
+// 'margin-right' : 0
+// }, 500);
+         $('#search_input').toggleClass('inputSow');
+         if($('.inputSow').length){
+            $('#search_input').animate({
+               'margin-right' : 0
+            }, 500);
+            $(this).css({
+               'background-image': 'url(images/search_icon-open.png)'
+            })
+         }
+         else {
+            $('#search_input').animate({
+               'margin-right' : -175
+            }, 500);
+            $(this).css({
+               'background-image': 'url(images/search_icon.png)'
+            })
+         }
+      });
+   });
+</script>
